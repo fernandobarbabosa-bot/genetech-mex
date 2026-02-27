@@ -5,22 +5,25 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', Arial, sans-serif;
-  color: #111;
-  background: #fff;
-}
-
 /* VARIABLES */
 :root {
   --green-dark: #3f5518;
   --green-accent: #7fa63a;
+  --black: #0f0f0f;
+  --gray: #4b4b4b;
+}
+
+/* BASE */
+body {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  background: #ffffff;
+  color: var(--black);
 }
 
 /* TOP BAR */
 .top-bar {
   background: var(--green-dark);
-  color: #fff;
+  color: #ffffff;
   font-size: 14px;
 }
 
@@ -36,20 +39,21 @@ body {
 .top-left,
 .top-right {
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 20px;
 }
 
 .top-bar a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
 }
 
 .top-bar select {
-  border: none;
   padding: 6px 10px;
   border-radius: 6px;
+  border: none;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
 }
 
@@ -57,7 +61,7 @@ body {
 .main-header {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 30px 32px 10px;
+  padding: 28px 32px 0;
 }
 
 .main-header img {
@@ -68,7 +72,7 @@ body {
 .hero {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 32px 80px;
+  padding: 48px 32px 80px;
 }
 
 .hero-grid {
@@ -78,26 +82,32 @@ body {
   align-items: center;
 }
 
-/* TEXTO */
+/* TITULO CON PUNCH */
 .hero-text h1 {
-  font-size: clamp(42px, 5vw, 72px);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(44px, 5.5vw, 76px);
   font-weight: 900;
-  line-height: 1.05;
+  line-height: 1.02;
+  letter-spacing: -1.4px;
   margin-bottom: 24px;
 }
 
+/* BODY */
 .hero-text p {
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 18px;
   line-height: 1.6;
-  color: #555;
-  max-width: 520px;
+  color: var(--gray);
+  max-width: 540px;
   margin-bottom: 28px;
 }
 
+/* DISCIPLINAS */
 .hero-disciplines {
-  font-size: 14px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   color: var(--green-accent);
   margin-bottom: 36px;
 }
@@ -105,21 +115,22 @@ body {
 /* CTA */
 .hero-cta {
   display: inline-block;
-  padding: 14px 30px;
-  border: 2px solid #111;
-  color: #111;
+  padding: 14px 34px;
+  border: 2px solid var(--black);
+  color: var(--black);
   text-decoration: none;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   transition: all 0.2s ease;
 }
 
 .hero-cta:hover {
-  background: #111;
-  color: #fff;
+  background: var(--black);
+  color: #ffffff;
 }
 
-/* IMAGEN */
+/* IMAGE */
 .hero-image img {
   width: 100%;
   max-width: 520px;
