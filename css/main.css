@@ -1,10 +1,15 @@
 /* =====================
-   RESET
+   RESET TOTAL
 ===================== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
 }
 
 /* =====================
@@ -36,36 +41,38 @@ body {
   font-weight: 500;
 }
 
-.topbar select {
-  font-size: 12px;
-  margin-left: 8px;
-}
-
 .topbar-right {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
+.topbar select {
+  font-size: 12px;
+}
+
 /* =====================
-   HEADER
+   HEADER (PEGADO AL TOPBAR)
 ===================== */
 .header {
-  padding: 18px 24px 8px; /* 👈 menos espacio abajo */
+  display: block;
+  padding: 16px 24px 0;   /* 👈 SIN padding inferior */
+  margin: 0;              /* 👈 CLAVE */
 }
 
 .header img {
-  height: 48px;          /* 👈 LOGO DIGNO EN MOBILE */
+  height: 48px;
   width: auto;
+  display: block;
 }
 
 /* =====================
-   HERO (MOBILE FIRST)
+   HERO (INMEDIATO)
 ===================== */
 .hero {
   display: flex;
   flex-direction: column;
-  padding: 16px 24px 32px; /* 👈 hero PEGADO al header */
+  padding: 24px 24px 40px;
   gap: 24px;
 }
 
@@ -128,16 +135,16 @@ body {
 @media (min-width: 768px) {
 
   .header {
-    padding: 24px 60px 0;
+    padding: 24px 60px 0; /* 👈 SIGUE SIN ESPACIO ABAJO */
   }
 
   .header img {
-    height: 64px; /* 👈 LOGO BIEN PROPORCIONADO */
+    height: 64px;
   }
 
   .hero {
     flex-direction: row;
-    align-items: flex-start; /* 👈 CLAVE: imagen ARRIBA */
+    align-items: flex-start;
     padding: 40px 60px 80px;
   }
 
