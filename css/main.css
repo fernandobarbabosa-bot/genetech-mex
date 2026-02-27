@@ -1,105 +1,130 @@
-/* =========================
-   CSS 23
-   ========================= */
+/* ========================= */
+/* CSS 24 – ALINEACIÓN FINAL */
+/* ========================= */
 
+/* RESET */
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  color: #1f1f1f;
-  background: #f7f6f2;
+  padding: 0;
 }
 
-/* CONTENEDOR ÚNICO */
+/* BASE */
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #f4f4f0;
+  color: #1c1c1c;
+}
+
+h1, h2 {
+  font-family: 'Inter', sans-serif;
+}
+
 .container {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 64px;
 }
 
-/* HERO VIDEO */
+/* TOP BAR */
+.top-bar {
+  background: #4f6228;
+  color: #fff;
+  font-size: 14px;
+}
+
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+/* HEADER */
+.header {
+  background: #f4f4f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* HERO */
 .hero-video {
   width: 100%;
   height: 60vh;
-  overflow: hidden;
-}
-
-.hero-video video {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* HERO TEXTO */
+/* HERO CONTENT */
 .hero-content {
-  padding: 56px 0 72px;
+  padding: 64px 0 56px;
 }
 
 .hero-content h1 {
-  font-size: 40px;
-  line-height: 1.15;
+  font-size: 48px;
   margin-bottom: 16px;
 }
 
-.hero-description {
-  max-width: 640px;
-  font-size: 16px;
+.hero-content p {
+  max-width: 620px;
   margin-bottom: 12px;
 }
 
-.hero-tags {
+.disciplines {
   font-size: 12px;
-  letter-spacing: 0.08em;
-  margin-bottom: 24px;
+  letter-spacing: 1px;
+  color: #6b7b3e;
+  margin-bottom: 16px;
 }
 
 .btn-outline {
   display: inline-block;
-  padding: 12px 20px;
-  border: 1px solid #1f1f1f;
+  padding: 12px 24px;
+  border: 2px solid #1c1c1c;
   text-decoration: none;
-  color: #1f1f1f;
-  font-size: 14px;
+  color: #1c1c1c;
 }
 
 /* ABOUT */
 .about {
-  padding: 72px 0;
+  padding: 64px 0;
 }
 
 .eyebrow {
-  display: block;
   font-size: 12px;
-  letter-spacing: 0.12em;
-  margin-bottom: 12px;
+  letter-spacing: 2px;
+  color: #6b7b3e;
 }
 
 .about h2 {
-  font-size: 32px;
-  line-height: 1.2;
-  max-width: 720px;
-  margin-bottom: 16px;
+  font-size: 36px;
+  margin: 16px 0;
 }
 
 .about p {
-  max-width: 720px;
+  max-width: 680px;
   margin-bottom: 16px;
 }
 
-.about ul {
-  padding-left: 18px;
+.about ul li {
+  margin-bottom: 6px;
 }
 
-/* SERVICIOS */
+/* SERVICES */
 .services {
-  padding: 72px 0;
+  padding: 64px 0 80px;
 }
 
-.services-title {
+.services h2 {
   font-size: 32px;
   margin-bottom: 32px;
 }
@@ -111,24 +136,39 @@ body {
 }
 
 .service-card {
-  background: #9b9b9b;
-  color: white;
-  height: 160px;
+  height: 220px;
+  background: #888;
+  color: #fff;
   display: flex;
   align-items: flex-end;
   padding: 16px;
-  text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+/* FOOTER */
+.footer {
+  background: #4f6228;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .container {
+    padding: 0 20px;
+  }
+
   .hero-video {
     height: 40vh;
   }
 
   .hero-content {
-    padding: 40px 0 56px;
+    padding: 40px 0;
   }
 
   .hero-content h1 {
@@ -137,10 +177,15 @@ body {
 
   .about,
   .services {
-    padding: 56px 0;
+    padding: 48px 0;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 16px;
   }
 }
