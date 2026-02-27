@@ -1,5 +1,5 @@
 /* =========================
-   CSS 18 – GENETECH (FIX)
+   CSS 19 – GENETECH (FINAL FIX)
    ========================= */
 
 /* RESET */
@@ -93,7 +93,7 @@ h1, h2 {
 }
 
 /* ================= HERO ================= */
-/* ⚠️ NO SE TOCA EL VIDEO */
+/* ⚠️ VIDEO SE QUEDA TAL CUAL */
 
 .hero-video {
   width: 100%;
@@ -102,21 +102,15 @@ h1, h2 {
   display: block;
 }
 
-/* TEXTO HERO — MISMA COLUMNA QUE ABOUT */
+/* TEXTO HERO — BLOQUE NORMAL, NO OVERLAY */
 
 .hero-text {
   background: #f4f4f0;
-  margin-top: -96px;
-}
-
-.hero-text .container {
-  max-width: 1200px;
+  padding: 96px 0;
 }
 
 .hero-text-inner {
   max-width: 720px;
-  padding: 48px;
-  background: rgba(244,244,240,0.95);
 }
 
 /* HERO TYPO */
@@ -153,10 +147,6 @@ h1, h2 {
   padding: 96px 0;
 }
 
-.about .container {
-  max-width: 1200px;
-}
-
 .eyebrow {
   font-size: 12px;
   letter-spacing: 2px;
@@ -175,8 +165,6 @@ h1, h2 {
   max-width: 720px;
   margin-bottom: 16px;
 }
-
-/* LISTA BIEN ALINEADA */
 
 .about ul {
   max-width: 720px;
@@ -252,11 +240,7 @@ h1, h2 {
   }
 
   .hero-text {
-    margin-top: 0;
-  }
-
-  .hero-text-inner {
-    padding: 32px 20px;
+    padding: 64px 0;
   }
 
   .hero-text h1 {
