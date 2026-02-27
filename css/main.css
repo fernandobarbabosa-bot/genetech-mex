@@ -1,11 +1,15 @@
-/* RESET */
+/* =====================
+   RESET
+===================== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* BASE */
+/* =====================
+   BASE
+===================== */
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: #111;
@@ -13,12 +17,14 @@ body {
   line-height: 1.5;
 }
 
-/* TOP BAR */
+/* =====================
+   TOP BAR
+===================== */
 .topbar {
   background: #4a5f1f;
   color: #fff;
   font-size: 12px;
-  padding: 8px 12px;
+  padding: 8px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,54 +44,63 @@ body {
 .topbar-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-/* HEADER */
+/* =====================
+   HEADER
+===================== */
 .header {
-  padding: 14px 16px;
+  padding: 18px 24px 8px; /* 👈 menos espacio abajo */
 }
 
 .header img {
-  height: 34px;
+  height: 48px;          /* 👈 LOGO DIGNO EN MOBILE */
   width: auto;
 }
 
-/* HERO */
+/* =====================
+   HERO (MOBILE FIRST)
+===================== */
 .hero {
   display: flex;
   flex-direction: column;
-  padding: 24px 16px;
+  padding: 16px 24px 32px; /* 👈 hero PEGADO al header */
   gap: 24px;
 }
 
-/* HERO CONTENT */
+/* =====================
+   HERO CONTENT
+===================== */
 .hero-content h1 {
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: 32px;
-  line-height: 1.1;
+  font-size: 34px;
+  line-height: 1.05;
   margin-bottom: 16px;
 }
 
 .hero-content p {
   font-size: 15px;
   color: #444;
-  margin-bottom: 16px;
+  max-width: 520px;
+  margin-bottom: 18px;
 }
 
 .hero-disciplines {
   font-size: 12px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
   font-weight: 600;
   color: #6b8e23;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
-/* CTA */
+/* =====================
+   CTA
+===================== */
 .hero-cta {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border: 2px solid #111;
   text-decoration: none;
   color: #111;
@@ -94,24 +109,41 @@ body {
   letter-spacing: 1px;
 }
 
-/* HERO IMAGE */
+/* =====================
+   HERO IMAGE
+===================== */
+.hero-image {
+  width: 100%;
+}
+
 .hero-image img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* DESKTOP (más adelante, NO TOCAR AHORITA) */
+/* =====================
+   DESKTOP
+===================== */
 @media (min-width: 768px) {
+
+  .header {
+    padding: 24px 60px 0;
+  }
+
+  .header img {
+    height: 64px; /* 👈 LOGO BIEN PROPORCIONADO */
+  }
+
   .hero {
     flex-direction: row;
-    align-items: center;
-    padding: 60px;
+    align-items: flex-start; /* 👈 CLAVE: imagen ARRIBA */
+    padding: 40px 60px 80px;
   }
 
   .hero-content {
     flex: 1;
-    padding-right: 40px;
+    padding-right: 60px;
   }
 
   .hero-image {
@@ -120,5 +152,9 @@ body {
 
   .hero-content h1 {
     font-size: 56px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
   }
 }
