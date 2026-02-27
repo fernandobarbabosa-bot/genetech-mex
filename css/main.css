@@ -1,6 +1,6 @@
-/* =========================
-   CSS 19 – GENETECH (FINAL FIX)
-   ========================= */
+/* =================================================
+   CSS 20 – GENETECH (ALIGNMENT FIX – FINAL)
+   ================================================= */
 
 /* RESET */
 * {
@@ -20,7 +20,7 @@ h1, h2 {
   font-family: 'Inter', sans-serif;
 }
 
-/* CONTAINER */
+/* CONTAINER (EJE MAESTRO) */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -93,8 +93,8 @@ h1, h2 {
 }
 
 /* ================= HERO ================= */
-/* ⚠️ VIDEO SE QUEDA TAL CUAL */
 
+/* VIDEO — NO SE TOCA */
 .hero-video {
   width: 100%;
   height: 70vh;
@@ -102,19 +102,17 @@ h1, h2 {
   display: block;
 }
 
-/* TEXTO HERO — BLOQUE NORMAL, NO OVERLAY */
-
+/* TEXTO HERO — BLOQUE NORMAL, ALINEADO */
 .hero-text {
   background: #f4f4f0;
-  padding: 96px 0;
+  padding: 80px 0; /* ritmo controlado */
 }
 
-.hero-text-inner {
-  max-width: 720px;
+.hero-text .container {
+  max-width: 720px; /* MISMO ANCHO QUE ABOUT */
 }
 
 /* HERO TYPO */
-
 .hero-text h1 {
   font-size: 48px;
   line-height: 1.15;
@@ -144,7 +142,11 @@ h1, h2 {
 /* ================= ABOUT ================= */
 
 .about {
-  padding: 96px 0;
+  padding: 80px 0; /* MISMO ritmo que hero */
+}
+
+.about .container {
+  max-width: 720px; /* MISMA COLUMNA */
 }
 
 .eyebrow {
@@ -157,17 +159,14 @@ h1, h2 {
 
 .about h2 {
   font-size: 36px;
-  max-width: 720px;
   margin-bottom: 24px;
 }
 
 .about p {
-  max-width: 720px;
   margin-bottom: 16px;
 }
 
 .about ul {
-  max-width: 720px;
   padding-left: 20px;
 }
 
@@ -178,7 +177,7 @@ h1, h2 {
 /* ================= SERVICES ================= */
 
 .services {
-  padding: 96px 0;
+  padding: 80px 0;
 }
 
 .services h2 {
@@ -204,8 +203,7 @@ h1, h2 {
   font-weight: 600;
 }
 
-/* 7º A LA IZQUIERDA */
-
+/* 7º ITEM A LA IZQUIERDA */
 .services-grid .service-card:nth-child(7) {
   grid-column: 1 / span 1;
 }
@@ -237,10 +235,6 @@ h1, h2 {
 
   .hamburger {
     display: block;
-  }
-
-  .hero-text {
-    padding: 64px 0;
   }
 
   .hero-text h1 {
