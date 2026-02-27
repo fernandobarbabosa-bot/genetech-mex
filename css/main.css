@@ -1,176 +1,70 @@
-/* =========================================================
-   RESET & BASE
-========================================================= */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* =========================
+   UTILITY BAR (USA STYLE)
+========================= */
 
-html {
-  font-size: 16px;
-}
-
-body {
-  font-family: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #0f0f0f;
-  background-color: #ffffff;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-
-/* =========================================================
-   HERO LAYOUT
-========================================================= */
-.hero {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  min-height: 100vh;
-  width: 100%;
-  background-color: #ffffff;
-}
-
-
-/* =========================================================
-   HERO CONTENT (LEFT)
-========================================================= */
-.hero-content {
-  padding: 5rem 5rem 5rem 6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-/* Logo */
-.hero-header {
-  margin-bottom: 4.5rem;
-}
-
-.hero-logo {
-  max-width: 240px;
-  height: auto;
-}
-
-
-/* =========================================================
-   HERO TEXT
-========================================================= */
-.hero-text h1 {
-  font-size: 3.6rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
-  max-width: 720px;
-  margin-bottom: 2rem;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: #1f1f1f;
-  max-width: 680px;
-  margin-bottom: 2.8rem;
-}
-
-.hero-disciplines {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #6a7f3f;
-  margin-bottom: 3.8rem;
-}
-
-
-/* =========================================================
-   CTA
-========================================================= */
-.hero-cta {
-  display: inline-block;
-  width: fit-content;
-  padding: 0.9rem 2.4rem;
-  border: 1px solid #0f0f0f;
-  color: #0f0f0f;
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-
-.hero-cta:hover {
-  background-color: #0f0f0f;
+.utility-bar {
+  background-color: #3b4f1f; /* Verde Genetech USA */
   color: #ffffff;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-/* =========================================================
-   HERO IMAGE (RIGHT)
-========================================================= */
-.hero-image {
-  position: relative;
-  overflow: hidden;
+.utility-left,
+.utility-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.utility-text {
+  opacity: 0.9;
 }
 
-
-/* =========================================================
-   PLACEHOLDER SECTION (TEMPORAL)
-========================================================= */
-.section-placeholder {
-  padding: 6rem;
-  background-color: #f6f6f6;
-  font-size: 1rem;
-  color: #555;
+.utility-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-@media (max-width: 1200px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-image {
-    height: 60vh;
-  }
-
-  .hero-content {
-    padding: 4rem 3.5rem;
-  }
+.utility-link:hover {
+  text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2.6rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .hero-logo {
-    max-width: 200px;
-  }
+.utility-separator {
+  opacity: 0.4;
 }
 
-@media (max-width: 480px) {
-  .hero-content {
-    padding: 3rem 2rem;
-  }
+.utility-login {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding-right: 16px;
+}
 
-  .hero-text h1 {
-    font-size: 2.1rem;
+.utility-login:hover {
+  text-decoration: underline;
+}
+
+.utility-lang {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .utility-bar {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 20px;
   }
 }
