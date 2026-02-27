@@ -1,82 +1,70 @@
-/* ===============================
-   RESET BÁSICO
-================================ */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+body {
+  font-family: 'Inter', Arial, sans-serif;
   color: #111;
-  background: #ffffff;
+  background: #fff;
 }
 
-/* ===============================
-   COLORES BASE
-================================ */
+/* VARIABLES */
 :root {
   --green-dark: #3f5518;
   --green-accent: #7fa63a;
-  --black: #111;
-  --gray: #555;
 }
 
-/* ===============================
-   TOP BAR (HEADER USA)
-================================ */
+/* TOP BAR */
 .top-bar {
   background: var(--green-dark);
   color: #fff;
   font-size: 14px;
 }
 
-.top-bar .container {
+.top-bar-inner {
   max-width: 1400px;
   margin: 0 auto;
   padding: 10px 32px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.top-bar-left,
-.top-bar-right {
+.top-left,
+.top-right {
   display: flex;
+  gap: 20px;
   align-items: center;
-  gap: 24px;
 }
 
 .top-bar a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
-}
-
-.top-bar select {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: none;
   font-weight: 600;
 }
 
-/* ===============================
-   HEADER LOGO
-================================ */
+.top-bar select {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* HEADER */
 .main-header {
-  padding: 28px 32px;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 30px 32px 10px;
 }
 
-.logo img {
-  height: 42px;
+.main-header img {
+  height: 44px;
 }
 
-/* ===============================
-   HERO
-================================ */
+/* HERO */
 .hero {
   max-width: 1400px;
   margin: 0 auto;
@@ -85,43 +73,39 @@ html, body {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
   align-items: center;
-  gap: 64px;
 }
 
-/* ===============================
-   HERO TEXTO
-================================ */
-.hero-content h1 {
-  font-size: clamp(42px, 5vw, 68px);
+/* TEXTO */
+.hero-text h1 {
+  font-size: clamp(42px, 5vw, 72px);
   font-weight: 900;
   line-height: 1.05;
   margin-bottom: 24px;
 }
 
-.hero-content p {
+.hero-text p {
   font-size: 18px;
   line-height: 1.6;
-  color: var(--gray);
+  color: #555;
   max-width: 520px;
   margin-bottom: 28px;
 }
 
 .hero-disciplines {
   font-size: 14px;
-  letter-spacing: 2px;
   font-weight: 700;
+  letter-spacing: 2px;
   color: var(--green-accent);
   margin-bottom: 36px;
 }
 
-/* ===============================
-   BOTÓN
-================================ */
+/* CTA */
 .hero-cta {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border: 2px solid #111;
   color: #111;
   text-decoration: none;
@@ -135,32 +119,17 @@ html, body {
   color: #fff;
 }
 
-/* ===============================
-   HERO IMAGEN
-================================ */
-.hero-image {
-  display: flex;
-  justify-content: center;
-}
-
+/* IMAGEN */
 .hero-image img {
   width: 100%;
   max-width: 520px;
-  height: auto;
-  border-radius: 2px;
-  object-fit: cover;
+  display: block;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding-top: 24px;
   }
 
   .hero-image {
