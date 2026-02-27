@@ -1,6 +1,6 @@
-/* =================================================
-   CSS 20 – GENETECH (ALIGNMENT FIX – FINAL)
-   ================================================= */
+/* =========================================================
+   CSS 21 — ALINEACIÓN DEFINITIVA DE COLUMNAS
+   ========================================================= */
 
 /* RESET */
 * {
@@ -16,19 +16,19 @@ body {
   background: #f4f4f0;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Inter', sans-serif;
+  font-weight: 700;
 }
 
-/* CONTAINER (EJE MAESTRO) */
+/* CONTENEDOR MAESTRO (CLAVE DE TODO) */
 .container {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 64px;
 }
 
-/* ================= TOP BAR ================= */
-
+/* TOP BAR */
 .top-bar {
   background: #4f6228;
   color: #fff;
@@ -42,8 +42,7 @@ h1, h2 {
   padding: 8px 0;
 }
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 .header {
   background: #f4f4f0;
   border-bottom: 1px solid #ddd;
@@ -51,8 +50,8 @@ h1, h2 {
 
 .header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 0;
 }
 
@@ -64,17 +63,17 @@ h1, h2 {
   margin-left: 32px;
   text-decoration: none;
   color: #1c1c1c;
+  font-weight: 500;
 }
 
 .hamburger {
   display: none;
+  font-size: 24px;
   background: none;
   border: none;
-  font-size: 24px;
 }
 
 /* MOBILE NAV */
-
 .nav-mobile {
   display: none;
   flex-direction: column;
@@ -82,7 +81,7 @@ h1, h2 {
 }
 
 .nav-mobile a {
-  padding: 16px 20px;
+  padding: 16px;
   border-top: 1px solid #ddd;
   text-decoration: none;
   color: #1c1c1c;
@@ -92,9 +91,13 @@ h1, h2 {
   display: flex;
 }
 
-/* ================= HERO ================= */
+/* =========================================================
+   HERO (NO SE TOCA EL VIDEO)
+   ========================================================= */
+.hero {
+  position: relative;
+}
 
-/* VIDEO — NO SE TOCA */
 .hero-video {
   width: 100%;
   height: 70vh;
@@ -102,26 +105,29 @@ h1, h2 {
   display: block;
 }
 
-/* TEXTO HERO — BLOQUE NORMAL, ALINEADO */
+/* TEXTO HERO — MISMA COLUMNA QUE TODO */
 .hero-text {
   background: #f4f4f0;
-  padding: 80px 0; /* ritmo controlado */
+  padding: 64px 0 48px;
 }
 
 .hero-text .container {
-  max-width: 720px; /* MISMO ANCHO QUE ABOUT */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-/* HERO TYPO */
 .hero-text h1 {
   font-size: 48px;
   line-height: 1.15;
+  max-width: 720px;
   margin-bottom: 16px;
 }
 
 .hero-text p {
-  max-width: 600px;
+  max-width: 620px;
   margin-bottom: 12px;
+  font-size: 16px;
 }
 
 .disciplines {
@@ -135,55 +141,60 @@ h1, h2 {
   display: inline-block;
   padding: 12px 24px;
   border: 2px solid #1c1c1c;
-  color: #1c1c1c;
   text-decoration: none;
+  color: #1c1c1c;
+  font-weight: 500;
 }
 
-/* ================= ABOUT ================= */
-
+/* =========================================================
+   ABOUT — MISMA COLUMNA, MISMA FUENTE, MISMO EJE
+   ========================================================= */
 .about {
-  padding: 80px 0; /* MISMO ritmo que hero */
-}
-
-.about .container {
-  max-width: 720px; /* MISMA COLUMNA */
+  padding: 64px 0 56px;
 }
 
 .eyebrow {
   font-size: 12px;
   letter-spacing: 2px;
   color: #6b7b3e;
-  margin-bottom: 12px;
-  display: block;
+  margin-bottom: 8px;
 }
 
 .about h2 {
   font-size: 36px;
-  margin-bottom: 24px;
-}
-
-.about p {
+  max-width: 720px;
   margin-bottom: 16px;
 }
 
+.about p {
+  max-width: 640px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
 .about ul {
-  padding-left: 20px;
+  margin-top: 12px;
+  padding-left: 18px;
 }
 
 .about li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  font-size: 15px;
 }
 
-/* ================= SERVICES ================= */
-
+/* =========================================================
+   SERVICES — MISMO EJE VISUAL
+   ========================================================= */
 .services {
-  padding: 80px 0;
+  padding: 56px 0 80px;
 }
 
 .services h2 {
-  margin-bottom: 32px;
+  font-size: 32px;
+  margin-bottom: 24px;
 }
 
+/* GRID */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -208,8 +219,9 @@ h1, h2 {
   grid-column: 1 / span 1;
 }
 
-/* ================= FOOTER ================= */
-
+/* =========================================================
+   FOOTER
+   ========================================================= */
 .footer {
   background: #4f6228;
   color: #fff;
@@ -219,12 +231,18 @@ h1, h2 {
 .footer-inner {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
-/* ================= RESPONSIVE ================= */
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
 
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 @media (max-width: 900px) {
-
   .container {
     padding: 0 20px;
   }
