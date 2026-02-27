@@ -1,78 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Genetech México</title>
-
-  <!-- Tipografías -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
 
 <!-- TOP BAR -->
-<div class="topbar">
+<div class="top-bar">
   <span>¿Tienes preguntas?</span>
   <span>(52) 55 5555-5555</span>
-  <a href="#">System Login</a>
-  <select>
-    <option>Español</option>
-    <option>English</option>
-  </select>
 </div>
 
 <!-- HEADER -->
 <header class="header">
-  <img src="images/logo-genetech-vet-mexico.png" alt="Genetech México" />
+  <img src="images/logo-genetech-vet-mexico.png" class="logo" alt="Genetech México">
+
   <nav class="nav-desktop">
     <a href="#">Home</a>
-    <a href="#">Nosotros</a>
-    <a href="#">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
   </nav>
 
-  <button class="hamburger" onclick="document.body.classList.toggle('menu-open')">
-    ☰
-  </button>
+  <button class="hamburger" id="hamburger">☰</button>
 </header>
 
-<nav class="nav-mobile">
+<nav class="nav-mobile" id="navMobile">
   <a href="#">Home</a>
-  <a href="#">Nosotros</a>
-  <a href="#">Servicios</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#servicios">Servicios</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
+<!-- HERO VIDEO -->
+<section class="hero-video">
   <video autoplay muted loop playsinline>
     <source src="images/hero-genetech-video.mp4" type="video/mp4">
   </video>
-
-  <div class="hero-text">
-    <h1>Protegemos y multiplicamos la genética más valiosa de México.</h1>
-    <p>
-      Biotecnología reproductiva avanzada para caballos de alto rendimiento,
-      con respaldo científico internacional.
-    </p>
-    <span class="disciplines">
-      SALTO · DRESSAGE · REINING · CARRERAS · CHARRERÍA
-    </span>
-    <a href="#" class="btn">Conoce nuestro enfoque</a>
-  </div>
 </section>
 
-<!-- ABOUT PREVIEW -->
-<section class="about">
+<!-- HERO TEXT -->
+<section class="hero-text">
+  <h1>Protegemos y multiplicamos la genética más valiosa de México.</h1>
+  <p>Biotecnología reproductiva avanzada para caballos de alto rendimiento, con respaldo científico internacional.</p>
+  <span>SALTO · DRESSAGE · REINING · CARRERAS · CHARRERÍA</span>
+  <a href="#nosotros" class="btn">Conoce nuestro enfoque</a>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="nosotros">
   <small>SOBRE GENETECH MÉXICO</small>
   <h2>Ciencia reproductiva avanzada aplicada a la genética equina de alto valor</h2>
   <p>
     Genetech México es un centro avanzado de reproducción equina con sede en Ciudad de México,
-    especializado en Inyección Intracitoplasmática de Espermatozoides (ICSI) y análisis seminal de alta precisión.
+    especializado en Inyección Intracitoplasmática de Espermatozoides (ICSI) y análisis seminal
+    de alta precisión.
   </p>
+
   <ul>
     <li>Instalaciones de última generación</li>
     <li>Técnicas avanzadas de reproducción asistida</li>
@@ -82,10 +67,11 @@
 </section>
 
 <!-- SERVICES -->
-<section class="services">
+<section class="services" id="servicios">
   <h2>Nuestros Servicios</h2>
 
   <div class="services-grid">
+
     <a href="servicios/icsi.html" class="service-card" style="background-image:url('images/service-icsi.jpg')">
       <h3>ICSI</h3>
     </a>
@@ -94,7 +80,8 @@
       <h3>Análisis Seminal</h3>
     </a>
 
-    <a href="servicios/investigacion.html" class="service-card" style="background-image:url('images/service-research.jpg')">
+    <!-- 👇 ESTE ES EL 3RO, FORZADO A COLUMNA 1 -->
+    <a href="servicios/investigacion.html" class="service-card service-left" style="background-image:url('images/service-research.jpg')">
       <h3>Investigación</h3>
     </a>
 
@@ -102,18 +89,18 @@
       <h3>Consultoría</h3>
     </a>
 
-    <a href="servicios/icsi.html" class="service-card" style="background-image:url('images/service-icsi.jpg')">
+    <a href="servicios/maduracion-ovocitos.html" class="service-card" style="background-image:url('images/service-oocyte.jpg')">
       <h3>Oocyte Maturation</h3>
     </a>
 
-    <a href="servicios/analisis-seminal.html" class="service-card" style="background-image:url('images/service-semen.jpg')">
+    <a href="servicios/aspiracion-folicular.html" class="service-card" style="background-image:url('images/service-follicular.jpg')">
       <h3>Follicular Aspiration</h3>
     </a>
 
-    <!-- 7º SERVICIO (IMPORTE CLAVE) -->
-    <a href="servicios/investigacion.html" class="service-card service-last" style="background-image:url('images/service-research.jpg')">
+    <a href="servicios/criopreservacion.html" class="service-card" style="background-image:url('images/service-cryo.jpg')">
       <h3>Cryopreservation</h3>
     </a>
+
   </div>
 </section>
 
@@ -123,10 +110,19 @@
   <p>Ciudad de México · (52) 55 5555-5555</p>
 
   <div class="social">
-    <a href="#">Instagram</a>
-    <a href="#">YouTube</a>
+    <a href="#" aria-label="Instagram">Instagram</a>
+    <a href="#" aria-label="YouTube">YouTube</a>
   </div>
 </footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMobile = document.getElementById('navMobile');
+
+  hamburger.addEventListener('click', () => {
+    navMobile.classList.toggle('open');
+  });
+</script>
 
 </body>
 </html>
