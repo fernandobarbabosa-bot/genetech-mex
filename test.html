@@ -1,78 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Genetech México</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  <div class="container top-bar-inner">
-    <span>¿Tienes preguntas?</span>
-    <span>(52) 55 5555-5555</span>
-    <span>System Login</span>
-    <select>
-      <option>Español</option>
-    </select>
-  </div>
-</div>
-
-<!-- HEADER -->
-<header class="header">
-  <div class="container header-inner">
-    <img src="images/logo-genetech-vet-mexico.png" alt="Genetech México" class="logo">
-
-    <nav class="nav-desktop">
-      <a href="#">Home</a>
-      <a href="#">Nosotros</a>
-      <a href="#">Servicios</a>
-    </nav>
-
-    <button class="hamburger" id="hamburger">
-      ☰
-    </button>
-  </div>
-
-  <nav class="nav-mobile" id="navMobile">
-    <a href="#">Home</a>
-    <a href="#">Nosotros</a>
-    <a href="#">Servicios</a>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
+<!-- HERO VIDEO -->
+<section class="hero-video">
+  <video autoplay muted loop playsinline>
     <source src="images/hero-genetech-video.mp4" type="video/mp4">
   </video>
+</section>
 
-  <div class="hero-text container">
+<!-- HERO TEXTO -->
+<section class="hero-content">
+  <div class="container">
     <h1>Protegemos y multiplicamos la genética más valiosa de México.</h1>
-    <p>
+
+    <p class="hero-description">
       Biotecnología reproductiva avanzada para caballos de alto rendimiento,
       con respaldo científico internacional.
     </p>
-    <p class="disciplines">
+
+    <p class="hero-tags">
       SALTO · DRESSAGE · REINING · CARRERAS · CHARRERÍA
     </p>
-    <a href="#" class="btn-outline">Conoce nuestro enfoque</a>
+
+    <a href="#about" class="btn-outline">Conoce nuestro enfoque</a>
   </div>
 </section>
 
-<!-- ABOUT PREVIEW -->
-<section class="about">
+<!-- ABOUT -->
+<section id="about" class="about">
   <div class="container">
-    <span class="eyebrow">SOBRE GENETECH MÉXICO</span>
-    <h2>Ciencia reproductiva avanzada aplicada a la genética equina de alto valor</h2>
+    <span class="eyebrow">Sobre Genetech México</span>
+
+    <h2>
+      Ciencia reproductiva avanzada aplicada a la genética equina de alto valor
+    </h2>
 
     <p>
       Genetech México es un centro avanzado de reproducción equina con sede en Ciudad de México,
@@ -89,67 +57,22 @@
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- SERVICIOS -->
 <section class="services">
   <div class="container">
-    <h2>Nuestros Servicios</h2>
+    <h2 class="services-title">Nuestros Servicios</h2>
 
     <div class="services-grid">
-      <a href="servicios/icsi.html" class="service-card" style="background-image:url('images/service-icsi.jpg')">
-        <span>ICSI</span>
-      </a>
-
-      <a href="servicios/analisis-seminal.html" class="service-card" style="background-image:url('images/service-semen.jpg')">
-        <span>Análisis Seminal</span>
-      </a>
-
-      <a href="servicios/investigacion.html" class="service-card" style="background-image:url('images/service-research.jpg')">
-        <span>Investigación</span>
-      </a>
-
-      <a href="servicios/consultoria.html" class="service-card" style="background-image:url('images/service-consulting.jpg')">
-        <span>Consultoría</span>
-      </a>
-
-      <a href="#" class="service-card">
-        <span>Oocyte Maturation</span>
-      </a>
-
-      <a href="#" class="service-card">
-        <span>Follicular Aspiration</span>
-      </a>
-
-      <a href="#" class="service-card">
-        <span>Cryopreservation</span>
-      </a>
+      <a href="servicios/icsi.html" class="service-card">ICSI</a>
+      <a href="servicios/analisis-seminal.html" class="service-card">Análisis Seminal</a>
+      <a href="servicios/investigacion.html" class="service-card">Investigación</a>
+      <a href="servicios/consultoria.html" class="service-card">Consultoría</a>
+      <div class="service-card">Oocyte Maturation</div>
+      <div class="service-card">Follicular Aspiration</div>
+      <div class="service-card">Cryopreservation</div>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <div>
-      <strong>Genetech México</strong><br>
-      Ciudad de México<br>
-      (52) 55 5555-5555
-    </div>
-
-    <div class="social">
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('navMobile');
-
-  hamburger.addEventListener('click', () => {
-    navMobile.classList.toggle('open');
-  });
-</script>
 
 </body>
 </html>
