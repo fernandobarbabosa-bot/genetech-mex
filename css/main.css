@@ -1,181 +1,195 @@
 /* RESET */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* BASE */
 body {
   font-family: 'IBM Plex Sans', sans-serif;
-  color: #1a1a1a;
-  background: #f6f7f2;
-}
-
-/* CONTAINER */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+  color: #1c1c1c;
+  background: #f4f5ee;
 }
 
 /* TOP BAR */
 .topbar {
-  background: #5b6e1d;
+  background: #3f4f1c;
   color: #fff;
   font-size: 13px;
-}
-
-.topbar-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 8px 24px;
   display: flex;
-  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 16px;
+  align-items: center;
 }
 
 /* HEADER */
 .header {
-  background: #f6f7f2;
-}
-
-.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 0;
+  padding: 18px 16px;
+  background: #fff;
 }
 
-.logo {
-  height: 40px;
+.header img {
+  height: 42px;
 }
 
-.desktop-nav {
-  display: flex;
-  gap: 24px;
-}
-
-.desktop-nav a {
-  text-decoration: none;
-  color: #1a1a1a;
-  font-weight: 500;
-}
-
-.hamburger {
+.nav-desktop {
   display: none;
 }
 
-/* HERO VIDEO */
-.hero-video video {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  display: block;
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
 }
 
-/* HERO TEXT */
+/* MOBILE MENU */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  padding: 16px;
+}
+
+.menu-open .nav-mobile {
+  display: flex;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero video {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
 .hero-text {
-  padding: 64px 0;
+  padding: 32px 16px;
 }
 
 .hero-text h1 {
   font-family: 'Inter', sans-serif;
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 16px;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.05;
 }
 
 .hero-text p {
-  max-width: 640px;
-  margin-bottom: 16px;
+  margin: 16px 0;
+  max-width: 520px;
 }
 
 .disciplines {
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: #5b6e1d;
+  font-size: 12px;
+  color: #6b7c2e;
+  font-weight: 600;
 }
 
-.btn-outline {
+.btn {
   display: inline-block;
-  margin-top: 24px;
-  padding: 12px 24px;
-  border: 2px solid #1a1a1a;
+  margin-top: 16px;
+  padding: 12px 18px;
+  border: 2px solid #000;
   text-decoration: none;
-  color: #1a1a1a;
-  font-weight: 500;
+  color: #000;
+  font-weight: 600;
 }
 
 /* ABOUT */
-.about-preview {
-  padding: 96px 0;
+.about {
+  padding: 64px 16px;
   background: #fff;
 }
 
-.eyebrow {
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #5b6e1d;
-}
-
-.about-preview h2 {
+.about h2 {
   font-family: 'Inter', sans-serif;
-  font-size: 36px;
-  font-weight: 700;
-  margin: 16px 0;
-  max-width: 720px;
+  font-size: 32px;
+  margin: 12px 0;
 }
 
-.about-preview p {
-  max-width: 720px;
-  margin-bottom: 16px;
+/* SERVICES */
+.services {
+  padding: 64px 16px;
 }
 
-.about-preview ul {
-  margin-top: 24px;
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
-.about-preview li {
-  margin-bottom: 8px;
+.service-card {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+}
+
+.service-card h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  z-index: 2;
 }
 
 /* FOOTER */
 .footer {
-  background: #5b6e1d;
+  background: #3f4f1c;
   color: #fff;
-  padding: 48px 0;
+  padding: 40px 16px;
 }
 
-.footer-inner {
+.footer .social {
+  margin-top: 12px;
   display: flex;
-  justify-content: space-between;
+  gap: 16px;
 }
 
-.social a {
-  color: #fff;
-  margin-left: 16px;
-  text-decoration: none;
-}
+/* DESKTOP */
+@media (min-width: 1024px) {
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .desktop-nav {
+  .nav-desktop {
+    display: flex;
+    gap: 24px;
+  }
+
+  .hamburger,
+  .nav-mobile {
     display: none;
   }
 
-  .hamburger {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
+  .hero {
+    flex-direction: column;
   }
 
-  .hero-video video {
-    height: 260px;
+  .hero-text {
+    max-width: 1100px;
+    margin: 0 auto;
   }
 
-  .hero-text h1 {
-    font-size: 32px;
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* 🔥 CLAVE: ÚLTIMO SERVICIO ARRANCA A LA IZQUIERDA */
+  .service-last {
+    grid-column: 1;
   }
 }
