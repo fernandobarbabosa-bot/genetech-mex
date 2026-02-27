@@ -1,5 +1,6 @@
 /* =========================================================
-   CSS 21 — ALINEACIÓN DEFINITIVA DE COLUMNAS
+   GENETECH MÉXICO
+   CSS VERSION 22 – ALINEACIÓN FINAL
    ========================================================= */
 
 /* RESET */
@@ -16,19 +17,19 @@ body {
   background: #f4f4f0;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
 }
 
-/* CONTENEDOR MAESTRO (CLAVE DE TODO) */
 .container {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 64px;
 }
 
-/* TOP BAR */
+/* =========================================================
+   TOP BAR
+   ========================================================= */
 .top-bar {
   background: #4f6228;
   color: #fff;
@@ -42,7 +43,9 @@ h1, h2, h3 {
   padding: 8px 0;
 }
 
-/* HEADER */
+/* =========================================================
+   HEADER
+   ========================================================= */
 .header {
   background: #f4f4f0;
   border-bottom: 1px solid #ddd;
@@ -92,10 +95,11 @@ h1, h2, h3 {
 }
 
 /* =========================================================
-   HERO (NO SE TOCA EL VIDEO)
+   HERO
+   (VIDEO INTACTO – TEXTO ABAJO, MISMO CONTENEDOR)
    ========================================================= */
 .hero {
-  position: relative;
+  width: 100%;
 }
 
 .hero-video {
@@ -105,96 +109,82 @@ h1, h2, h3 {
   display: block;
 }
 
-/* TEXTO HERO — MISMA COLUMNA QUE TODO */
+/* TEXTO DEL HERO – FLUJO NORMAL */
 .hero-text {
-  background: #f4f4f0;
-  padding: 64px 0 48px;
-}
-
-.hero-text .container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  padding: 64px 0 72px;
 }
 
 .hero-text h1 {
   font-size: 48px;
-  line-height: 1.15;
-  max-width: 720px;
+  max-width: 820px;
   margin-bottom: 16px;
 }
 
 .hero-text p {
   max-width: 620px;
   margin-bottom: 12px;
-  font-size: 16px;
 }
 
 .disciplines {
   font-size: 12px;
   letter-spacing: 1px;
   color: #6b7b3e;
-  margin-bottom: 16px;
 }
 
 .btn-outline {
   display: inline-block;
+  margin-top: 20px;
   padding: 12px 24px;
   border: 2px solid #1c1c1c;
   text-decoration: none;
   color: #1c1c1c;
-  font-weight: 500;
 }
 
 /* =========================================================
-   ABOUT — MISMA COLUMNA, MISMA FUENTE, MISMO EJE
+   ABOUT (MISMO CONTENEDOR, MISMA ALINEACIÓN)
    ========================================================= */
 .about {
-  padding: 64px 0 56px;
+  padding: 72px 0;
 }
 
 .eyebrow {
   font-size: 12px;
   letter-spacing: 2px;
   color: #6b7b3e;
-  margin-bottom: 8px;
 }
 
 .about h2 {
   font-size: 36px;
-  max-width: 720px;
-  margin-bottom: 16px;
+  max-width: 820px;
+  margin: 16px 0;
 }
 
 .about p {
-  max-width: 640px;
-  margin-bottom: 16px;
-  font-size: 16px;
+  max-width: 620px;
 }
 
 .about ul {
-  margin-top: 12px;
+  margin-top: 16px;
   padding-left: 18px;
 }
 
 .about li {
-  margin-bottom: 6px;
-  font-size: 15px;
+  margin-bottom: 8px;
 }
 
 /* =========================================================
-   SERVICES — MISMO EJE VISUAL
+   SERVICES (MISMO EJE VISUAL)
    ========================================================= */
 .services {
-  padding: 56px 0 80px;
+  padding: 72px 0 96px;
 }
 
 .services h2 {
-  font-size: 32px;
-  margin-bottom: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  margin-bottom: 32px;
 }
 
-/* GRID */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -205,18 +195,13 @@ h1, h2, h3 {
   height: 220px;
   background-size: cover;
   background-position: center;
-  background-color: #777;
   display: flex;
   align-items: flex-end;
   padding: 16px;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-}
-
-/* 7º ITEM A LA IZQUIERDA */
-.services-grid .service-card:nth-child(7) {
-  grid-column: 1 / span 1;
+  background-color: #777;
 }
 
 /* =========================================================
@@ -231,12 +216,6 @@ h1, h2, h3 {
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-}
-
-.footer a {
-  color: #fff;
-  text-decoration: none;
 }
 
 /* =========================================================
@@ -255,16 +234,20 @@ h1, h2, h3 {
     display: block;
   }
 
+  .hero-video {
+    height: 56vh;
+  }
+
+  .hero-text {
+    padding: 40px 0 48px;
+  }
+
   .hero-text h1 {
     font-size: 32px;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
-  }
-
-  .services-grid .service-card:nth-child(7) {
-    grid-column: auto;
   }
 
   .footer-inner {
