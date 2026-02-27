@@ -1,149 +1,124 @@
 /* RESET */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-/* VARIABLES */
-:root {
-  --green-dark: #3f5518;
-  --green-accent: #7fa63a;
-  --black: #0f0f0f;
-  --gray: #4b4b4b;
 }
 
 /* BASE */
 body {
-  font-family: 'IBM Plex Sans', Arial, sans-serif;
-  background: #ffffff;
-  color: var(--black);
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.5;
 }
 
 /* TOP BAR */
-.top-bar {
-  background: var(--green-dark);
-  color: #ffffff;
-  font-size: 14px;
-}
-
-.top-bar-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 10px 32px;
+.topbar {
+  background: #4a5f1f;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.top-left,
-.top-right {
+.topbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.topbar select {
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.topbar-right {
   display: flex;
   align-items: center;
-  gap: 20px;
-}
-
-.top-bar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.top-bar select {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: none;
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 600;
+  gap: 10px;
 }
 
 /* HEADER */
-.main-header {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 28px 32px 0;
+.header {
+  padding: 14px 16px;
 }
 
-.main-header img {
-  height: 44px;
+.header img {
+  height: 34px;
+  width: auto;
 }
 
 /* HERO */
 .hero {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 48px 32px 80px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  gap: 24px;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
-  align-items: center;
-}
-
-/* TITULO CON PUNCH */
-.hero-text h1 {
+/* HERO CONTENT */
+.hero-content h1 {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(44px, 5.5vw, 76px);
   font-weight: 900;
-  line-height: 1.02;
-  letter-spacing: -1.4px;
-  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 1.1;
+  margin-bottom: 16px;
 }
 
-/* BODY */
-.hero-text p {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--gray);
-  max-width: 540px;
-  margin-bottom: 28px;
+.hero-content p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 16px;
 }
 
-/* DISCIPLINAS */
 .hero-disciplines {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  color: var(--green-accent);
-  margin-bottom: 36px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #6b8e23;
+  margin-bottom: 20px;
 }
 
 /* CTA */
 .hero-cta {
   display: inline-block;
-  padding: 14px 34px;
-  border: 2px solid var(--black);
-  color: var(--black);
+  padding: 12px 20px;
+  border: 2px solid #111;
   text-decoration: none;
-  font-family: 'IBM Plex Sans', sans-serif;
+  color: #111;
   font-weight: 700;
-  letter-spacing: 1.2px;
-  transition: all 0.2s ease;
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
-.hero-cta:hover {
-  background: var(--black);
-  color: #ffffff;
-}
-
-/* IMAGE */
+/* HERO IMAGE */
 .hero-image img {
   width: 100%;
-  max-width: 520px;
+  height: auto;
   display: block;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
+/* DESKTOP (más adelante, NO TOCAR AHORITA) */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    padding: 60px;
+  }
+
+  .hero-content {
+    flex: 1;
+    padding-right: 40px;
   }
 
   .hero-image {
-    margin-top: 40px;
+    flex: 1;
+  }
+
+  .hero-content h1 {
+    font-size: 56px;
   }
 }
