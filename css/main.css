@@ -1,70 +1,145 @@
 /* =========================
-   UTILITY BAR (USA STYLE)
+   RESET
 ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.utility-bar {
-  background-color: #3b4f1f; /* Verde Genetech USA */
-  color: #ffffff;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 13px;
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.5;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+  background: #3f5a1c;
+  color: #fff;
+  font-size: 14px;
   padding: 10px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.utility-left,
-.utility-right {
+.top-bar-left span {
+  margin-right: 20px;
+}
+
+.top-bar-right {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 20px;
 }
 
-.utility-text {
-  opacity: 0.9;
-}
-
-.utility-link {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.utility-link:hover {
-  text-decoration: underline;
-}
-
-.utility-separator {
-  opacity: 0.4;
-}
-
-.utility-login {
-  color: #ffffff;
+.top-bar a {
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
-  padding-right: 16px;
 }
 
-.utility-login:hover {
-  text-decoration: underline;
-}
-
-.utility-lang {
-  background: #ffffff;
-  color: #000000;
-  border: none;
-  border-radius: 4px;
+.top-bar select {
   padding: 6px 10px;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
+  border-radius: 6px;
+  border: none;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .utility-bar {
-    flex-direction: column;
-    gap: 8px;
-    padding: 12px 20px;
+/* =========================
+   HEADER
+========================= */
+.main-header {
+  padding: 30px 40px;
+}
+
+.main-header img {
+  max-width: 260px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 140px);
+}
+
+.hero-content {
+  padding: 80px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+
+.hero-disciplines {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #6b8e23;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 2px solid #111;
+  color: #111;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.hero-button:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+.hero-image {
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 60px 40px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
   }
 }
