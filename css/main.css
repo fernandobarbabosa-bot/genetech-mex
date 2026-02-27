@@ -126,3 +126,107 @@ body {
     font-size: 56px;
   }
 }
+
+/* =========================
+   ABOUT PREVIEW – HOME
+   ========================= */
+
+.about-preview {
+  background-color: #ffffff;
+  padding: 64px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Eyebrow */
+.about-eyebrow {
+  display: inline-block;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6a8f2f;
+  margin-bottom: 12px;
+}
+
+/* Heading */
+.about-header h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #111111;
+  margin: 0 0 24px 0;
+}
+
+/* Copy */
+.about-content p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444444;
+  margin-bottom: 16px;
+  max-width: 640px;
+}
+
+/* Feature list */
+.about-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 40px 0;
+}
+
+.about-features li {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 15px;
+  color: #222222;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.about-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #6a8f2f;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* CTA */
+.about-cta .btn-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 2px solid #111111;
+  color: #111111;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.about-cta .btn-secondary:hover {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media (min-width: 1024px) {
+  .about-header h2 {
+    font-size: 42px;
+  }
+
+  .about-content p {
+    font-size: 17px;
+  }
+}
