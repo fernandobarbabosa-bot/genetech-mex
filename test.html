@@ -2,15 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Genetech México</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
@@ -20,44 +20,42 @@
     <div class="top-bar-inner">
       <span>¿Tienes preguntas?</span>
       <span>(52) 55 5555-5555</span>
-      <a href="https://genetech.tierone.digital/login" target="_blank">System Login</a>
-      <select>
-        <option>Español</option>
-        <option>English</option>
-      </select>
+      <span>System Login</span>
+      <span class="lang">Español</span>
     </div>
   </div>
 
-  <!-- HEADER / LOGO -->
+  <!-- HEADER -->
   <header class="site-header">
-    <img
-      src="images/logo-genetech-vet-mexico.png"
-      alt="Genetech México"
-      class="logo"
-    />
+    <div class="header-inner">
+      <img src="images/logo-genetech-vet-mexico.png" class="logo" alt="Genetech México">
+
+      <nav class="nav-desktop">
+        <a href="/">Home</a>
+        <a href="#about">Nosotros</a>
+        <a href="#services">Servicios</a>
+      </nav>
+
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+
+    <nav class="nav-mobile">
+      <a href="/">Home</a>
+      <a href="#about">Nosotros</a>
+      <a href="#services">Servicios</a>
+    </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-
-    <!-- VIDEO HERO -->
     <div class="hero-video">
-      <video
-        src="images/hero-genetech-video.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-      ></video>
+      <video src="images/hero-genetech-video.mp4" autoplay muted loop playsinline></video>
     </div>
 
-    <!-- HERO TEXT -->
     <div class="hero-content">
-      <h1>
-        Protegemos y multiplicamos la genética más valiosa de México.
-      </h1>
+      <h1>Protegemos y multiplicamos la genética más valiosa de México.</h1>
 
-      <p class="hero-description">
+      <p class="hero-subtitle">
         Biotecnología reproductiva avanzada para caballos de alto rendimiento,
         con respaldo científico internacional.
       </p>
@@ -66,42 +64,108 @@
         SALTO · DRESSAGE · REINING · CARRERAS · CHARRERÍA
       </p>
 
-      <a href="#" class="btn-primary">
-        Conoce nuestro enfoque
-      </a>
+      <a href="#about" class="btn-outline">Conoce nuestro enfoque</a>
     </div>
-
   </section>
 
-  <!-- ABOUT PREVIEW -->
-  <section class="about-preview">
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-inner">
+      <span class="eyebrow">SOBRE GENETECH MÉXICO</span>
 
-    <span class="kicker">SOBRE GENETECH MÉXICO</span>
+      <h2>Ciencia reproductiva avanzada aplicada a la genética equina de alto valor</h2>
 
-    <h2>
-      Ciencia reproductiva avanzada aplicada a la genética equina de alto valor
-    </h2>
+      <p>
+        Genetech México es un centro avanzado de reproducción equina con sede en Ciudad de México,
+        especializado en Inyección Intracitoplasmática de Espermatozoides (ICSI) y análisis seminal de alta precisión.
+      </p>
 
-    <p>
-      Genetech México es un centro avanzado de reproducción equina con sede en
-      Ciudad de México, especializado en Inyección Intracitoplasmática de
-      Espermatozoides (ICSI) y análisis seminal de alta precisión.
-    </p>
+      <p>
+        Combinamos tecnología de vanguardia, embriólogos altamente especializados y protocolos científicos
+        de nivel internacional para maximizar el éxito reproductivo de caballos de alto rendimiento.
+      </p>
 
-    <p>
-      Combinamos tecnología de vanguardia, embriólogos altamente especializados
-      y protocolos científicos de nivel internacional para maximizar el éxito
-      reproductivo de caballos de alto rendimiento.
-    </p>
-
-    <ul>
-      <li>Instalaciones de última generación</li>
-      <li>Técnicas avanzadas de reproducción asistida</li>
-      <li>Know-how científico internacional</li>
-      <li>Departamento interno de investigación</li>
-    </ul>
-
+      <ul class="about-list">
+        <li>Instalaciones de última generación</li>
+        <li>Técnicas avanzadas de reproducción asistida</li>
+        <li>Know-how científico internacional</li>
+        <li>Departamento interno de investigación</li>
+      </ul>
+    </div>
   </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="services-grid">
+
+      <a href="servicios/icsi.html" class="service-card" style="background-image:url('images/service-icsi.jpg')">
+        <div class="service-overlay">
+          <h3>ICSI</h3>
+          <p>Inyección Intracitoplasmática de Espermatozoides.</p>
+        </div>
+      </a>
+
+      <a href="servicios/analisis-seminal.html" class="service-card" style="background-image:url('images/service-semen.jpg')">
+        <div class="service-overlay">
+          <h3>Análisis Seminal</h3>
+          <p>Evaluación avanzada de calidad espermática.</p>
+        </div>
+      </a>
+
+      <a href="servicios/investigacion.html" class="service-card" style="background-image:url('images/service-research.jpg')">
+        <div class="service-overlay">
+          <h3>Investigación</h3>
+          <p>Desarrollo científico continuo.</p>
+        </div>
+      </a>
+
+      <a href="servicios/consultoria.html" class="service-card" style="background-image:url('images/service-consulting.jpg')">
+        <div class="service-overlay">
+          <h3>Consultoría</h3>
+          <p>Estrategia reproductiva personalizada.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-info">
+        <strong>Genetech México</strong>
+        <p>Ciudad de México, México</p>
+        <p>Tel. (52) 55 5555-5555</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <!-- Instagram icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6.5-.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"/>
+          </svg>
+        </a>
+
+        <a href="#" aria-label="YouTube">
+          <!-- YouTube icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M23 7s-.2-1.7-.8-2.5A3.3 3.3 0 0019.9 3C16.8 2.7 12 2.7 12 2.7h0s-4.8 0-7.9.3a3.3 3.3 0 00-2.3 1.5C1.2 5.3 1 7 1 7S.8 9.2.8 11.4v1.3C.8 15 .8 17 .8 17s.2 1.7.8 2.5A3.7 3.7 0 004.2 21c3.1.3 7.8.3 7.8.3s4.8 0 7.9-.3a3.3 3.3 0 002.3-1.5c.6-.8.8-2.5.8-2.5s.2-2.2.2-4.4v-1.3C23.2 9.2 23 7 23 7zM9.7 15.2V8.8l6.2 3.2-6.2 3.2z"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('.nav-mobile');
+
+    toggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+  </script>
 
 </body>
 </html>
