@@ -1,184 +1,255 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
 }
 
+/* =========================
+   BASE
+========================= */
 body {
-  background: #f6f7f2;
-  color: #222;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1c1c1c;
+  background: #f4f4f0;
 }
 
-/* TOP BAR */
+h1, h2 {
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+/* =========================
+   TOP BAR
+========================= */
 .top-bar {
-  background: #556b2f;
+  background: #4f6228;
   color: #fff;
-  padding: 8px 20px;
-  display: flex;
-  justify-content: space-between;
   font-size: 14px;
 }
 
-/* HEADER */
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+/* =========================
+   HEADER
+========================= */
 .header {
+  background: #f4f4f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
-  background: #fff;
+  padding: 20px 0;
 }
 
 .logo {
-  height: 40px;
+  height: 48px;
 }
 
 .nav-desktop a {
-  margin-left: 20px;
+  margin-left: 32px;
   text-decoration: none;
-  color: #222;
+  color: #1c1c1c;
   font-weight: 500;
 }
 
 .hamburger {
   display: none;
-  font-size: 26px;
+  font-size: 24px;
   background: none;
   border: none;
 }
 
-/* MOBILE NAV */
+/* =========================
+   MOBILE NAV
+========================= */
 .nav-mobile {
   display: none;
   flex-direction: column;
-  background: #fff;
+  background: #f4f4f0;
 }
 
 .nav-mobile a {
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
+  padding: 16px;
+  border-top: 1px solid #ddd;
   text-decoration: none;
-  color: #222;
+  color: #1c1c1c;
 }
 
 .nav-mobile.open {
   display: flex;
 }
 
-/* HERO VIDEO */
-.hero-video video {
+/* =========================
+   HERO
+========================= */
+.hero {
+  padding-bottom: 40px;
+}
+
+.hero-video {
   width: 100%;
-  height: auto;
+  height: 55vh;
+  object-fit: cover;
   display: block;
 }
 
-/* HERO TEXT */
 .hero-text {
-  padding: 50px 20px;
-  max-width: 900px;
+  padding: 64px 0 0 0;
 }
 
 .hero-text h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
+  font-size: 48px;
+  margin-bottom: 16px;
 }
 
 .hero-text p {
-  margin-bottom: 15px;
+  max-width: 620px;
+  margin-bottom: 12px;
 }
 
-.hero-text span {
-  display: block;
-  color: #6b7d3a;
-  margin-bottom: 20px;
+.disciplines {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #6b7b3e;
 }
 
-.btn {
+.btn-outline {
   display: inline-block;
-  border: 2px solid #222;
-  padding: 10px 20px;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: 2px solid #1c1c1c;
   text-decoration: none;
-  color: #222;
+  color: #1c1c1c;
+  font-weight: 500;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 .about {
-  padding: 60px 20px;
-  max-width: 900px;
+  padding: 80px 0;
 }
 
-.about small {
-  color: #6b7d3a;
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #6b7b3e;
 }
 
 .about h2 {
-  font-size: 32px;
-  margin: 15px 0;
+  font-size: 36px;
+  margin: 16px 0;
 }
 
 .about ul {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .about li {
   margin-bottom: 8px;
 }
 
-/* SERVICES */
+/* =========================
+   SERVICES
+========================= */
 .services {
-  padding: 60px 20px;
+  padding: 80px 0;
 }
 
 .services h2 {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
 }
 
 .service-card {
-  height: 260px;
+  height: 240px;
   background-size: cover;
   background-position: center;
+  position: relative;
   display: flex;
   align-items: flex-end;
   padding: 20px;
   color: #fff;
   text-decoration: none;
-  background-blend-mode: multiply;
-  background-color: rgba(0,0,0,0.35);
+  font-weight: 600;
 }
 
-.service-card h3 {
-  font-size: 22px;
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
 }
 
-/* 👇 3er servicio a la izquierda */
-.service-left {
-  grid-column: 1;
+.service-card span {
+  position: relative;
+  z-index: 2;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
 }
 
-/* FOOTER */
+/* Fuerza el 7º servicio a la izquierda */
+.services-grid .service-card:nth-child(7) {
+  grid-column: 1 / span 1;
+}
+
+/* =========================
+   FOOTER
+========================= */
 .footer {
-  background: #556b2f;
+  background: #4f6228;
   color: #fff;
-  padding: 40px 20px;
+  padding: 40px 0;
 }
 
-.footer .social a {
-  margin-right: 15px;
-  color: #fff;
-  text-decoration: none;
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
-  .services-grid {
-    grid-template-columns: 1fr;
+
+  .container {
+    padding: 0 20px;
   }
 
   .nav-desktop {
@@ -187,5 +258,30 @@ body {
 
   .hamburger {
     display: block;
+  }
+
+  .hero-video {
+    height: 45vh;
+  }
+
+  .hero-text {
+    padding-top: 32px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid .service-card:nth-child(7) {
+    grid-column: auto;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 16px;
   }
 }
