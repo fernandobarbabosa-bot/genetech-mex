@@ -1,5 +1,5 @@
 /* =========================
-   CSS 17 — GENETECH MÉXICO
+   CSS 18 – GENETECH (FIX)
    ========================= */
 
 /* RESET */
@@ -18,18 +18,17 @@ body {
 
 h1, h2 {
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
 }
 
+/* CONTAINER */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 64px;
 }
 
-/* =========================
-   TOP BAR
-   ========================= */
+/* ================= TOP BAR ================= */
+
 .top-bar {
   background: #4f6228;
   color: #fff;
@@ -43,9 +42,8 @@ h1, h2 {
   padding: 8px 0;
 }
 
-/* =========================
-   HEADER
-   ========================= */
+/* ================= HEADER ================= */
+
 .header {
   background: #f4f4f0;
   border-bottom: 1px solid #ddd;
@@ -53,8 +51,8 @@ h1, h2 {
 
 .header-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 16px 0;
 }
 
@@ -66,29 +64,26 @@ h1, h2 {
   margin-left: 32px;
   text-decoration: none;
   color: #1c1c1c;
-  font-weight: 500;
 }
 
 .hamburger {
   display: none;
-  font-size: 24px;
   background: none;
   border: none;
+  font-size: 24px;
 }
 
-/* =========================
-   MOBILE NAV
-   ========================= */
+/* MOBILE NAV */
+
 .nav-mobile {
   display: none;
   flex-direction: column;
   background: #f4f4f0;
-  border-top: 1px solid #ddd;
 }
 
 .nav-mobile a {
-  padding: 16px;
-  border-bottom: 1px solid #ddd;
+  padding: 16px 20px;
+  border-top: 1px solid #ddd;
   text-decoration: none;
   color: #1c1c1c;
 }
@@ -97,12 +92,8 @@ h1, h2 {
   display: flex;
 }
 
-/* =========================
-   HERO (VIDEO ONLY)
-   ========================= */
-.hero {
-  width: 100%;
-}
+/* ================= HERO ================= */
+/* ⚠️ NO SE TOCA EL VIDEO */
 
 .hero-video {
   width: 100%;
@@ -111,22 +102,33 @@ h1, h2 {
   display: block;
 }
 
-/* =========================
-   HERO TEXT (BELOW VIDEO)
-   ========================= */
+/* TEXTO HERO — MISMA COLUMNA QUE ABOUT */
+
 .hero-text {
   background: #f4f4f0;
-  padding: 64px 0;
+  margin-top: -96px;
 }
+
+.hero-text .container {
+  max-width: 1200px;
+}
+
+.hero-text-inner {
+  max-width: 720px;
+  padding: 48px;
+  background: rgba(244,244,240,0.95);
+}
+
+/* HERO TYPO */
 
 .hero-text h1 {
   font-size: 48px;
-  max-width: 800px;
+  line-height: 1.15;
   margin-bottom: 16px;
 }
 
 .hero-text p {
-  max-width: 640px;
+  max-width: 600px;
   margin-bottom: 12px;
 }
 
@@ -134,44 +136,50 @@ h1, h2 {
   font-size: 12px;
   letter-spacing: 1px;
   color: #6b7b3e;
+  margin-bottom: 16px;
 }
 
 .btn-outline {
   display: inline-block;
-  margin-top: 16px;
   padding: 12px 24px;
   border: 2px solid #1c1c1c;
-  text-decoration: none;
   color: #1c1c1c;
+  text-decoration: none;
 }
 
-/* =========================
-   ABOUT
-   ========================= */
+/* ================= ABOUT ================= */
+
 .about {
-  padding: 80px 0;
+  padding: 96px 0;
+}
+
+.about .container {
+  max-width: 1200px;
 }
 
 .eyebrow {
   font-size: 12px;
   letter-spacing: 2px;
   color: #6b7b3e;
-  display: block;
   margin-bottom: 12px;
+  display: block;
 }
 
 .about h2 {
   font-size: 36px;
-  max-width: 900px;
-  margin-bottom: 16px;
+  max-width: 720px;
+  margin-bottom: 24px;
 }
 
 .about p {
   max-width: 720px;
+  margin-bottom: 16px;
 }
 
+/* LISTA BIEN ALINEADA */
+
 .about ul {
-  margin-top: 24px;
+  max-width: 720px;
   padding-left: 20px;
 }
 
@@ -179,11 +187,10 @@ h1, h2 {
   margin-bottom: 8px;
 }
 
-/* =========================
-   SERVICES
-   ========================= */
+/* ================= SERVICES ================= */
+
 .services {
-  padding: 80px 0;
+  padding: 96px 0;
 }
 
 .services h2 {
@@ -209,14 +216,14 @@ h1, h2 {
   font-weight: 600;
 }
 
-/* 7th ITEM FORCED LEFT */
+/* 7º A LA IZQUIERDA */
+
 .services-grid .service-card:nth-child(7) {
   grid-column: 1 / span 1;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* ================= FOOTER ================= */
+
 .footer {
   background: #4f6228;
   color: #fff;
@@ -228,10 +235,10 @@ h1, h2 {
   justify-content: space-between;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 900px) {
+
   .container {
     padding: 0 20px;
   }
@@ -244,8 +251,12 @@ h1, h2 {
     display: block;
   }
 
-  .hero-video {
-    height: 50vh;
+  .hero-text {
+    margin-top: 0;
+  }
+
+  .hero-text-inner {
+    padding: 32px 20px;
   }
 
   .hero-text h1 {
