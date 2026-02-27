@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Genetech Vet México</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genetech México</title>
 
-  <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
   <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="topbar-left">
-      ¿Tienes preguntas?
-    </div>
-
-    <div class="topbar-center">
-      (52) 55 5555-5555
-    </div>
-
-    <div class="topbar-right">
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span>¿Tienes preguntas?</span>
+      <span>(52) 55 5555-5555</span>
       <a href="https://genetech.tierone.digital/login" target="_blank">System Login</a>
       <select>
         <option>Español</option>
@@ -33,47 +28,78 @@
     </div>
   </div>
 
+  <!-- HEADER / LOGO -->
+  <header class="site-header">
+    <img
+      src="images/logo-genetech-vet-mexico.png"
+      alt="Genetech México"
+      class="logo"
+    />
+  </header>
+
   <!-- HERO -->
   <section class="hero">
 
-    <!-- LEFT -->
-    <div class="hero-left">
+    <!-- VIDEO HERO -->
+    <div class="hero-video">
+      <video
+        src="images/hero-genetech-video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+    </div>
 
-      <img
-        src="images/logo-genetech-vet-mexico.png"
-        alt="Genetech México"
-        class="hero-logo"
-      >
-
+    <!-- HERO TEXT -->
+    <div class="hero-content">
       <h1>
-        Protegemos y<br>
-        multiplicamos la<br>
-        genética más valiosa<br>
-        de México.
+        Protegemos y multiplicamos la genética más valiosa de México.
       </h1>
 
-      <p>
-        Biotecnología reproductiva avanzada para caballos de alto
-        rendimiento, con respaldo científico internacional.
+      <p class="hero-description">
+        Biotecnología reproductiva avanzada para caballos de alto rendimiento,
+        con respaldo científico internacional.
       </p>
 
-      <div class="hero-disciplines">
+      <p class="hero-disciplines">
         SALTO · DRESSAGE · REINING · CARRERAS · CHARRERÍA
-      </div>
+      </p>
 
-      <a href="#" class="hero-cta">
-        CONOCE NUESTRO ENFOQUE
+      <a href="#" class="btn-primary">
+        Conoce nuestro enfoque
       </a>
-
     </div>
 
-    <!-- RIGHT -->
-    <div class="hero-right">
-      <img
-        src="images/hero-caballo.jpg"
-        alt="Caballo de alto rendimiento"
-      >
-    </div>
+  </section>
+
+  <!-- ABOUT PREVIEW -->
+  <section class="about-preview">
+
+    <span class="kicker">SOBRE GENETECH MÉXICO</span>
+
+    <h2>
+      Ciencia reproductiva avanzada aplicada a la genética equina de alto valor
+    </h2>
+
+    <p>
+      Genetech México es un centro avanzado de reproducción equina con sede en
+      Ciudad de México, especializado en Inyección Intracitoplasmática de
+      Espermatozoides (ICSI) y análisis seminal de alta precisión.
+    </p>
+
+    <p>
+      Combinamos tecnología de vanguardia, embriólogos altamente especializados
+      y protocolos científicos de nivel internacional para maximizar el éxito
+      reproductivo de caballos de alto rendimiento.
+    </p>
+
+    <ul>
+      <li>Instalaciones de última generación</li>
+      <li>Técnicas avanzadas de reproducción asistida</li>
+      <li>Know-how científico internacional</li>
+      <li>Departamento interno de investigación</li>
+    </ul>
 
   </section>
 
