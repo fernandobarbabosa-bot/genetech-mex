@@ -50,10 +50,11 @@ body {
 
 /* Texto */
 .hero-text h1 {
-  font-size: 3.2rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
+  font-family: 'Canela', serif;
+  font-size: 3.4rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
   margin-bottom: 1.8rem;
 }
 
