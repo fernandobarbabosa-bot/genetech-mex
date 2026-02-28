@@ -1,208 +1,41 @@
 /* =========================================================
-   CSS 26 – ESTADO FINAL ESTABLE
-   Proyecto: Genetech México
-   Archivo: css/main.css
+   CSS 27 – GENETECH MÉXICO
+   Layout estable + alineación final
    ========================================================= */
 
-/* ------------------------
-   Variables base
-------------------------- */
-:root {
-  --bg-main: #f6f6f2;
-  --text-main: #1f1f1f;
-  --text-muted: #6b6b6b;
-  --accent: #6b7b3a;
-  --container-max: 1200px;
-}
-
-/* ------------------------
-   Reset mínimo
-------------------------- */
+/* -------------------------
+   RESET / BASE
+-------------------------- */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  color: #1f1f1f;
+  background: #faf9f6;
   line-height: 1.5;
 }
 
-/* ------------------------
-   Contenedor único GLOBAL
-   (hero texto / about / servicios)
-------------------------- */
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* -------------------------
+   CONTAINER GLOBAL
+-------------------------- */
 .container {
-  max-width: var(--container-max);
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ------------------------
-   HERO VIDEO (bloque independiente)
-------------------------- */
-.hero-video {
-  width: 100%;
-  display: block;
-}
-
-.hero-video video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ------------------------
-   HERO TEXTO (Opción A)
-------------------------- */
-.hero-text {
-  margin-top: 48px;
-}
-
-.hero-text h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  margin: 0 0 16px 0;
-}
-
-.hero-text p {
-  max-width: 680px;
-  color: var(--text-muted);
-  margin: 0 0 16px 0;
-}
-
-.hero-tags {
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 20px;
-}
-
-.hero-cta {
-  display: inline-block;
-  padding: 10px 18px;
-  border: 1px solid var(--text-main);
-  text-decoration: none;
-  color: var(--text-main);
-  font-size: 0.9rem;
-}
-
-/* ------------------------
-   ABOUT / CIENCIA REPRODUCTIVA
-------------------------- */
-.about-section {
-  margin-top: 56px;
-}
-
-.about-section .eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 12px;
-}
-
-.about-section h2 {
-  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-  font-weight: 700;
-  margin: 0 0 16px 0;
-}
-
-.about-section p {
-  max-width: 680px;
-  color: var(--text-muted);
-  margin: 0 0 16px 0;
-}
-
-/* ---- LISTADO (OPCIÓN A: SIN BULLETS) ---- */
-.about-section ul {
-  list-style: none;
-  padding-left: 0;
-  margin: 16px 0 0 0;
-}
-
-.about-section li {
-  margin-bottom: 0.6rem;
-  color: var(--text-main);
-}
-
-/* ------------------------
-   SERVICIOS
-------------------------- */
-.services-section {
-  margin-top: 64px;
-}
-
-.services-section h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 0 0 24px 0;
-}
-
-/* Grid servicios */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.service-card {
-  background: #7a7a7a;
-  height: 140px;
-  padding: 16px;
-  color: #fff;
-  display: flex;
-  align-items: flex-end;
-  font-weight: 600;
-}
-
-/* ------------------------
-   FOOTER
-------------------------- */
-footer {
-  background: #5f6f2c;
-  color: #fff;
-  margin-top: 72px;
-  padding: 32px 24px;
-}
-
-footer .container {
-  font-size: 0.85rem;
-}
-
-/* ------------------------
-   RESPONSIVE
-------------------------- */
-@media (max-width: 900px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-text {
-    margin-top: 32px;
-  }
-
-  .about-section {
-    margin-top: 40px;
-  }
-
-  .services-section {
-    margin-top: 48px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* =========================================
-   HOTFIX HEADER – NO TOCA EL RESTO
-   ========================================= */
-
+/* -------------------------
+   HEADER / TOPBAR
+-------------------------- */
 header {
   background: #ffffff;
   border-bottom: 1px solid #e5e5e5;
@@ -226,3 +59,158 @@ header nav a:hover {
   text-decoration: underline;
 }
 
+/* -------------------------
+   HERO VIDEO
+-------------------------- */
+.hero-video {
+  width: 100%;
+  background: #000;
+}
+
+.hero-video video {
+  width: 100%;
+  height: auto;
+}
+
+/* -------------------------
+   HERO TEXT
+-------------------------- */
+.hero-text {
+  padding: 48px 0 56px;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.hero-text p {
+  max-width: 640px;
+  font-size: 1rem;
+  margin: 0 0 12px;
+}
+
+.hero-meta {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6f6f6f;
+  margin-bottom: 20px;
+}
+
+.hero-text a.button {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #1f1f1f;
+  color: #1f1f1f;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* -------------------------
+   ABOUT / CIENCIA
+-------------------------- */
+.about {
+  padding: 56px 0 64px;
+}
+
+.about .eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a8a6a;
+  margin-bottom: 12px;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 20px;
+  max-width: 720px;
+}
+
+.about p {
+  max-width: 720px;
+  margin-bottom: 20px;
+}
+
+/* Opción A: bullets eliminados */
+.about ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about ul li {
+  margin-bottom: 8px;
+  padding-left: 0;
+}
+
+/* -------------------------
+   SERVICIOS
+-------------------------- */
+.services {
+  padding: 48px 0 72px;
+}
+
+.services h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: #7a7a7a;
+  color: #ffffff;
+  padding: 20px;
+  min-height: 120px;
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.9rem;
+}
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+footer {
+  background: #5b6a2f;
+  color: #ffffff;
+  padding: 32px 0;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* -------------------------
+   MOBILE
+-------------------------- */
+@media (max-width: 768px) {
+
+  header .container {
+    min-height: 64px;
+  }
+
+  .hero-text {
+    padding: 32px 0 40px;
+  }
+
+  .hero-text h1,
+  .about h2,
+  .services h2 {
+    font-size: 1.7rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
