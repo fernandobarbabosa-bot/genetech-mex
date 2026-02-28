@@ -1,11 +1,9 @@
 /* =========================================================
-   CSS 27 – GENETECH MÉXICO
-   Layout estable + alineación final
+   CSS 29 – GENETECH MÉXICO
+   FIX FINAL: HEADER + VIDEO + ALINEACIÓN GLOBAL
    ========================================================= */
 
-/* -------------------------
-   RESET / BASE
--------------------------- */
+/* RESET */
 * {
   box-sizing: border-box;
 }
@@ -15,27 +13,43 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
   color: #1f1f1f;
   background: #faf9f6;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 img,
 video {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
-/* -------------------------
-   CONTAINER GLOBAL
--------------------------- */
+/* =====================================
+   CONTAINER ÚNICO (SAGRADO)
+===================================== */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* -------------------------
-   HEADER / TOPBAR
--------------------------- */
+/* =====================================
+   TOP BAR
+===================================== */
+.top-bar {
+  background: #6f7f2c;
+  color: #ffffff;
+  font-size: 0.75rem;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 36px;
+}
+
+/* =====================================
+   HEADER
+===================================== */
 header {
   background: #ffffff;
   border-bottom: 1px solid #e5e5e5;
@@ -55,39 +69,38 @@ header nav a {
   font-size: 0.9rem;
 }
 
-header nav a:hover {
-  text-decoration: underline;
+/* =====================================
+   HERO VIDEO (ALINEADO)
+===================================== */
+.hero-video {
+  padding: 24px 0 0;
 }
 
-/* -------------------------
-   HERO VIDEO
--------------------------- */
-.hero-video {
-  width: 100%;
-  background: #000;
+.hero-video .container {
+  padding: 0 24px; /* 👈 CLAVE: mismo padding */
 }
 
 .hero-video video {
   width: 100%;
   height: auto;
+  border-radius: 4px;
 }
 
-/* -------------------------
-   HERO TEXT
--------------------------- */
+/* =====================================
+   HERO TEXTO
+===================================== */
 .hero-text {
-  padding: 48px 0 56px;
+  padding: 32px 0 40px;
 }
 
 .hero-text h1 {
   font-size: 2.2rem;
   font-weight: 600;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
 }
 
 .hero-text p {
-  max-width: 640px;
-  font-size: 1rem;
+  max-width: 720px;
   margin: 0 0 12px;
 }
 
@@ -96,7 +109,7 @@ header nav a:hover {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #6f6f6f;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .hero-text a.button {
@@ -108,11 +121,11 @@ header nav a:hover {
   font-size: 0.9rem;
 }
 
-/* -------------------------
+/* =====================================
    ABOUT / CIENCIA
--------------------------- */
+===================================== */
 .about {
-  padding: 56px 0 64px;
+  padding: 40px 0 48px;
 }
 
 .about .eyebrow {
@@ -126,16 +139,16 @@ header nav a:hover {
 .about h2 {
   font-size: 2.2rem;
   font-weight: 600;
-  margin: 0 0 20px;
   max-width: 720px;
+  margin: 0 0 18px;
 }
 
 .about p {
   max-width: 720px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-/* Opción A: bullets eliminados */
+/* Bullets opción A */
 .about ul {
   list-style: none;
   padding: 0;
@@ -144,20 +157,19 @@ header nav a:hover {
 
 .about ul li {
   margin-bottom: 8px;
-  padding-left: 0;
 }
 
-/* -------------------------
+/* =====================================
    SERVICIOS
--------------------------- */
+===================================== */
 .services {
-  padding: 48px 0 72px;
+  padding: 40px 0 64px;
 }
 
 .services h2 {
   font-size: 2.2rem;
   font-weight: 600;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .services-grid {
@@ -176,9 +188,9 @@ header nav a:hover {
   font-size: 0.9rem;
 }
 
-/* -------------------------
+/* =====================================
    FOOTER
--------------------------- */
+===================================== */
 footer {
   background: #5b6a2f;
   color: #ffffff;
@@ -186,14 +198,9 @@ footer {
   font-size: 0.85rem;
 }
 
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-/* -------------------------
+/* =====================================
    MOBILE
--------------------------- */
+===================================== */
 @media (max-width: 768px) {
 
   header .container {
@@ -201,7 +208,7 @@ footer a {
   }
 
   .hero-text {
-    padding: 32px 0 40px;
+    padding: 28px 0 32px;
   }
 
   .hero-text h1,
