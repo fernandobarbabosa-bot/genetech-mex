@@ -1,56 +1,45 @@
 /* =========================
-   CSS 31 RESET BÁSICO
-========================= */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+   GENETECH MÉXICO
+   CSS 32 — FINAL ESTABLE
+   ========================= */
+
+/* RESET */
+* {
   margin: 0;
   padding: 0;
-}
-
-html {
-  font-size: 16px;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
-  background: #f6f4ef;
-  color: #1f1f1f;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #1a1a1a;
+  background: #f6f6f2;
   line-height: 1.6;
 }
 
-/* =========================
-   CONTENEDOR MAESTRO
-========================= */
+/* CONTAINER ÚNICO */
 .container {
-  max-width: 1120px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* =========================
-   TOP BAR
-========================= */
+/* ================= TOP BAR ================= */
 .top-bar {
-  background: #7a8f2b;
+  background: #7a8b2e;
   color: #fff;
-  font-size: 0.85rem;
+  font-size: 13px;
 }
 
-.top-bar .container {
+.top-bar-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 40px;
+  padding: 6px 0;
 }
 
-/* =========================
-   HEADER / NAV
-========================= */
-header {
-  background: #f6f4ef;
+/* ================= HEADER ================= */
+.header {
+  background: #f6f6f2;
   border-bottom: 1px solid #ddd;
 }
 
@@ -61,110 +50,142 @@ header {
   height: 72px;
 }
 
-nav a {
-  margin-left: 24px;
+.logo {
+  height: 42px;
+}
+
+/* NAV DESKTOP */
+.nav-desktop {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-desktop a {
   text-decoration: none;
-  color: #1f1f1f;
+  color: #222;
   font-weight: 500;
 }
 
-nav a:hover {
-  text-decoration: underline;
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-/* =========================
-   HERO VIDEO
-========================= */
-.hero-video {
-  width: 100%;
+/* NAV MOBILE */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: #f6f6f2;
+  border-top: 1px solid #ddd;
+}
+
+.nav-mobile a {
+  padding: 14px 24px;
+  text-decoration: none;
+  color: #222;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-mobile.open {
   display: flex;
-  justify-content: center;
-  background: #000;
 }
 
-.hero-video video {
+/* ================= HERO VIDEO ================= */
+.hero-video-block {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero-video-block video {
   width: 100%;
-  max-width: 1120px;
-  height: auto;
   display: block;
+  border-radius: 6px;
 }
 
-/* =========================
-   HERO TEXTO (OPCIÓN A)
-========================= */
-.hero-text {
+/* ================= HERO TEXTO ================= */
+.hero-text-block {
+  padding: 48px 0 40px;
+}
+
+.hero-text-block h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  max-width: 820px;
+}
+
+.hero-description {
+  margin-top: 16px;
+  max-width: 720px;
+  font-size: 18px;
+}
+
+.disciplines {
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #666;
+}
+
+.btn-outline {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 20px;
+  border: 1px solid #333;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+/* ================= ABOUT ================= */
+.about {
   padding: 56px 0 48px;
 }
 
-.hero-text h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.hero-text p {
-  max-width: 640px;
-  margin-bottom: 12px;
-  color: #333;
-}
-
-.hero-meta {
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.hero-text a {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #1f1f1f;
-  color: #1f1f1f;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.hero-text a:hover {
-  background: #1f1f1f;
-  color: #fff;
-}
-
-/* =========================
-   ABOUT
-========================= */
-.about {
-  padding: 48px 0 56px;
-}
-
-.about small {
-  display: block;
-  color: #7a8f2b;
-  letter-spacing: 0.1em;
-  font-size: 0.75rem;
-  margin-bottom: 8px;
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #7a8b2e;
 }
 
 .about h2 {
-  font-size: 2.1rem;
-  font-weight: 700;
-  margin-bottom: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  margin-top: 12px;
+  max-width: 820px;
 }
 
 .about p {
+  margin-top: 16px;
   max-width: 720px;
-  color: #333;
 }
 
-/* =========================
-   SERVICIOS
-========================= */
+/* LISTA LIMPIA (SIN BULLETS) */
+.about ul {
+  list-style: none;
+  margin-top: 16px;
+  padding-left: 0;
+}
+
+.about li {
+  margin-bottom: 6px;
+}
+
+/* ================= SERVICES ================= */
 .services {
-  padding: 48px 0 72px;
+  padding: 56px 0 72px;
 }
 
-.services h2 {
-  font-size: 1.9rem;
-  font-weight: 700;
+.services-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
   margin-bottom: 32px;
 }
 
@@ -175,46 +196,74 @@ nav a:hover {
 }
 
 .service-card {
-  background: #9b9b9b;
-  height: 160px;
+  position: relative;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: flex-end;
   padding: 16px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #999;
 }
 
 .service-card span {
-  color: #fff;
   font-weight: 600;
 }
 
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background: #6b7f2a;
-  color: #fff;
-  padding: 32px 0;
-  font-size: 0.85rem;
+.service-card.empty {
+  background: #9a9a9a;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ================= FOOTER ================= */
+.footer {
+  background: #5f6f2b;
+  color: #fff;
+  padding: 32px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 1.8rem;
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-video-block {
+    padding: 16px;
+  }
+
+  .hero-text-block h1 {
+    font-size: 32px;
   }
 
   .about h2,
-  .services h2 {
-    font-size: 1.6rem;
+  .services-title {
+    font-size: 28px;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
   }
 
-  nav a {
-    margin-left: 16px;
+  .footer-inner {
+    flex-direction: column;
+    gap: 16px;
   }
 }
