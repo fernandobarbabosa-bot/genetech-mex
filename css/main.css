@@ -1,53 +1,42 @@
 /* =========================================================
-   CSS 27 – GENETECH MÉXICO
-   FIX REAL: MENÚ DUPLICADO + VIDEO CENTRADO
+   CSS 30 – RECONSTRUCCIÓN CONTROLADA (BASE LIMPIA)
+   NO cambiar nombres de clases ni estructura HTML
    ========================================================= */
 
-/* RESET */
+/* ---------- Variables base ---------- */
+:root {
+  --bg-main: #f6f4ef;
+  --text-main: #1f1f1f;
+  --text-muted: #6f6f6f;
+  --accent: #7c8f3a;
+
+  --max-width: 1100px;
+}
+
+/* ---------- Reset mínimo (NO agresivo) ---------- */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #faf9f6;
-  color: #1f1f1f;
-  line-height: 1.55;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
-img,
-video {
-  display: block;
-  max-width: 100%;
-}
-
-/* =========================================================
-   CONTAINER ÚNICO
-   ========================================================= */
+/* ---------- Contenedor maestro ---------- */
 .container {
-  max-width: 1100px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* =========================================================
-   OCULTAR MENÚ DUPLICADO (LEGACY)
-   ========================================================= */
-body > a,
-body > nav,
-body > .nav,
-body > .menu {
-  display: none !important;
-}
-
-/* =========================================================
-   TOP BAR
-   ========================================================= */
+/* ---------- TOP / HEADER ---------- */
 .top-bar {
-  background: #6f7f2c;
+  background: var(--accent);
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .top-bar .container {
@@ -57,12 +46,9 @@ body > .menu {
   height: 36px;
 }
 
-/* =========================================================
-   HEADER
-   ========================================================= */
 header {
-  background: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+  background: var(--bg-main);
+  border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
 header .container {
@@ -72,114 +58,112 @@ header .container {
   height: 72px;
 }
 
-header nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #1f1f1f;
-  font-size: 14px;
-}
-
-/* =========================================================
-   HERO VIDEO
-   ========================================================= */
-.hero-video {
-  padding-top: 24px;
-}
-
-.hero-video .container {
+nav ul {
+  list-style: none;
   display: flex;
-  justify-content: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* ---------- HERO VIDEO ---------- */
+.hero-video {
+  width: 100%;
+  background: #000;
 }
 
 .hero-video video {
   width: 100%;
-  max-width: 1100px;
   height: auto;
-  margin: 0 auto;
-  border-radius: 4px;
+  display: block;
+  max-height: 520px;
+  object-fit: cover;
 }
 
-/* =========================================================
-   HERO TEXTO
-   ========================================================= */
+/* ---------- HERO TEXTO ---------- */
 .hero-text {
-  padding: 32px 0 40px;
+  padding: 48px 0 56px;
 }
 
 .hero-text h1 {
-  font-size: 36px;
-  margin-bottom: 12px;
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 16px;
 }
 
 .hero-text p {
-  max-width: 720px;
-  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+  color: var(--text-muted);
 }
 
-.hero-meta {
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #6f6f6f;
-  margin-bottom: 18px;
+.hero-text .tags {
+  font-size: 13px;
+  letter-spacing: .08em;
+  color: var(--text-muted);
+  margin: 12px 0 20px;
 }
 
-.hero-text a {
+.hero-text a.button {
   display: inline-block;
   padding: 10px 18px;
-  border: 1px solid #1f1f1f;
-  color: #1f1f1f;
+  border: 1px solid var(--text-main);
   text-decoration: none;
+  color: var(--text-main);
   font-size: 14px;
 }
 
-/* =========================================================
-   ABOUT
-   ========================================================= */
+/* ---------- ABOUT ---------- */
 .about {
-  padding: 40px 0 48px;
+  padding: 56px 0 64px;
 }
 
 .about .eyebrow {
   font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #8a8a6a;
+  letter-spacing: .12em;
+  color: var(--accent);
   margin-bottom: 12px;
 }
 
 .about h2 {
   font-size: 36px;
-  margin-bottom: 18px;
-  max-width: 720px;
+  font-weight: 700;
+  margin: 0 0 20px;
 }
 
 .about p {
-  max-width: 720px;
-  margin-bottom: 18px;
+  max-width: 760px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
-/* LISTA SIN BULLETS (OPCIÓN A) */
+/* Lista SIN bullets (opción A) */
 .about ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 20px 0 0;
 }
 
 .about ul li {
   margin-bottom: 8px;
+  padding-left: 0;
 }
 
-/* =========================================================
-   SERVICIOS
-   ========================================================= */
+/* ---------- SERVICIOS ---------- */
 .services {
-  padding: 40px 0 64px;
+  padding: 64px 0 80px;
 }
 
-.services h2 {
-  font-size: 36px;
-  margin-bottom: 28px;
+.services h3 {
+  font-size: 32px;
+  margin-bottom: 32px;
 }
 
 .services-grid {
@@ -189,41 +173,54 @@ header nav a {
 }
 
 .service-card {
-  background: #7a7a7a;
-  color: #fff;
-  padding: 20px;
-  min-height: 120px;
+  background: #9b9b9b;
+  height: 180px;
   display: flex;
   align-items: flex-end;
-  font-size: 14px;
+  padding: 16px;
+  color: #fff;
+  font-weight: 600;
 }
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* ---------- FOOTER ---------- */
 footer {
-  background: #5b6a2f;
+  background: #556b2f;
   color: #fff;
   padding: 32px 0;
+}
+
+footer p {
+  margin: 4px 0;
   font-size: 14px;
 }
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
 
   header .container {
-    height: 64px;
+    height: auto;
+    padding: 16px 24px;
+    flex-direction: column;
+    gap: 12px;
   }
 
-  .hero-text h1,
-  .about h2,
-  .services h2 {
+  nav ul {
+    gap: 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .about h2 {
     font-size: 28px;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    height: 160px;
   }
 }
