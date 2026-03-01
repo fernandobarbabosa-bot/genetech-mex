@@ -34,7 +34,7 @@ body {
 .top-bar-inner {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 10px 0;
 }
 
 /* ================= HEADER ================= */
