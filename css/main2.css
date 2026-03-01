@@ -1,1 +1,299 @@
+/* =========================
+   GENETECH MÉXICO
+   CSS 33 — FINAL CON HOVER
+   ========================= */
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #1a1a1a;
+  background: #f6f6f2;
+  line-height: 1.6;
+}
+
+/* CONTAINER ÚNICO */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+  background: #7a8b2e;
+  color: #fff;
+  font-size: 13px;
+}
+
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #f6f6f2;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  height: 42px;
+}
+
+/* NAV DESKTOP */
+.nav-desktop {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-desktop a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* NAV MOBILE */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: #f6f6f2;
+  border-top: 1px solid #ddd;
+}
+
+.nav-mobile a {
+  padding: 14px 24px;
+  text-decoration: none;
+  color: #222;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-mobile.open {
+  display: flex;
+}
+
+/* ================= HERO VIDEO ================= */
+.hero-video-block {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero-video-block video {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+/* ================= HERO TEXTO ================= */
+.hero-text-block {
+  padding: 48px 0 40px;
+}
+
+.hero-text-block h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  max-width: 820px;
+}
+
+.hero-description {
+  margin-top: 16px;
+  max-width: 720px;
+  font-size: 18px;
+}
+
+.disciplines {
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #666;
+}
+
+.btn-outline {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 20px;
+  border: 1px solid #333;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+/* ================= ABOUT ================= */
+.about {
+  padding: 56px 0 48px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #7a8b2e;
+}
+
+.about h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  margin-top: 12px;
+  max-width: 820px;
+}
+
+.about p {
+  margin-top: 16px;
+  max-width: 720px;
+}
+
+/* LISTA LIMPIA (SIN BULLETS) */
+.about ul {
+  list-style: none;
+  margin-top: 16px;
+  padding-left: 0;
+}
+
+.about li {
+  margin-bottom: 6px;
+}
+
+/* ================= SERVICES ================= */
+.services {
+  padding: 56px 0 72px;
+}
+
+.services-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+.service-card {
+  position: relative;
+  aspect-ratio: 1 / 1;              /* CUADRADAS */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 6px;
+
+  transform: translateZ(0);
+  transition: transform 0.4s ease;
+}
+
+/* OVERLAY VERDE */
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(95, 111, 43, 0.45); /* verde Genetech */
+  transition: background 0.4s ease;
+}
+
+/* TEXTO */
+.service-card span {
+  position: relative;
+  z-index: 1;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  padding: 16px;
+  transform: translateY(0);
+  transition: transform 0.4s ease;
+}
+
+/* HOVER */
+.service-card:hover {
+  transform: scale(1.02);
+}
+
+.service-card:hover::before {
+  background: rgba(95, 111, 43, 0.65);
+}
+
+.service-card:hover span {
+  transform: translateY(-4px);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #5f6f2b;
+  color: #fff;
+  padding: 32px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-video-block {
+    padding: 16px;
+  }
+
+  .hero-text-block h1 {
+    font-size: 32px;
+  }
+
+  .about h2,
+  .services-title {
+    font-size: 28px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
 
